@@ -9,10 +9,10 @@ def generate_burndown_chart(backlog, progress):
         remaining_work -= p
         ideal_burndown.append(remaining_work)
 
-    ideal_burndown.append(0)  # Adiciona o trabalho restante zero ao final
+    ideal_burndown.append(0)
 
     # Plotando o gráfico burndown
-    days = range(len(progress) + 1)  # Ajuste para ter o mesmo tamanho que progress
+    days = range(len(progress) + 1) 
     
     backlog_line = [sum(backlog)] * (len(progress) + 1)  # Linha do backlog
     
@@ -36,8 +36,8 @@ def generate_burndown_chart(backlog, progress):
     plt.show()
 
 # Dados do backlog e progresso
-backlog = [2, 4, 6, 4, 4, 4, 6, 4, 8, 2]
-progress = [2, 2, 4, 2, 2, 2, 4, 2, 6, 2]
+backlog = [2, 4, 6, 4, 4, 3]
+progress = [2, 2, 4, 2, 2, 2]
 
 # Gerar o gráfico burndown
 generate_burndown_chart(backlog, progress)
